@@ -16,6 +16,9 @@ from sklearn.metrics import confusion_matrix
 import util.semseg.metrics.raster as metrics
 import numpy as np
 
+
+import visdom
+
 # Be able to add many loss functions
 class MultiTaskGen(TrainModel):
     def name(self):
@@ -90,7 +93,9 @@ class MultiTaskGen(TrainModel):
                 for k in range(output.shape[0]):
                     self.rmse += sqrt(self.mse_scaled_error(output[k], target[k], n_valid_pixls).item()) # mean through the batch
                     self.n_images += 1
-
+            #vis = visdom.Visdom(port=8001)
+            #raise(RuntimeError(target.data.shape))
+            #vis.image(target.data[0])
             self.set_current_visuals(depth_gt=target.data,
                                         depth_out=output.data)
             self.set_current_errors(L1=e_regression.item())

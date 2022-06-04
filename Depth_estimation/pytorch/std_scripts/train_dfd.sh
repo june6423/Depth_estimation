@@ -33,4 +33,4 @@ DISPLAY_FREQ=50
 
 SAVE_CKPT_FREQ=100
 
-python ./main.py --name $NAME --dataroot $DATAROOT --train --batchSize $BATCHSIZE --model $MODEL --mtl_method $MTL_MODEL --port $PORT --display_id $DISPLAY_ID --net_architecture $NET_ARCHITECTURE --pretrained --use_crop --use_padding --data_augmentation t f f f t --max_distance $MAX_D --scale_to_mm $SCALE --train --tasks $TASKS --outputs_nc $OUTPUTS_NC --use_skips --display_freq $DISPLAY_FREQ --lr 2e-4 --optim Adam --weightDecay $weightDecay --nThreads 1 --imageSize $IMAGE_SIZE --nEpochs $NEPOCHS --save_checkpoint_freq $SAVE_CKPT_FREQ
+python ./main.py --name $NAME --dataroot $DATAROOT --train --batchSize $BATCHSIZE --model $MODEL --mtl_method $MTL_MODEL --port $PORT --display_id $DISPLAY_ID --net_architecture $NET_ARCHITECTURE --use_crop --use_padding --data_augmentation t f f f t --max_distance $MAX_D --scale_to_mm $SCALE --train --tasks $TASKS --outputs_nc $OUTPUTS_NC --use_skips --display_freq $DISPLAY_FREQ --lr 2e-4 --optim Adam --weightDecay $weightDecay --nThreads 1 --imageSize $IMAGE_SIZE --nEpochs $NEPOCHS --save_checkpoint_freq $SAVE_CKPT_FREQ

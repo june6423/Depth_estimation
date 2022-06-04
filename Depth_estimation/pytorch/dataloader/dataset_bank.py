@@ -19,6 +19,7 @@ def dataset_std(root, data_split, tasks):
     targets_list = []
     for task in tasks:
         targets_list.append(sorted(glob.glob(join(root, task, data_split, '*.png'))))
+        #raise(RuntimeError(str(input_list.size())))
     # return list(zip(input_list, targets_list))
     return input_list, targets_list
 

@@ -24,9 +24,11 @@ def CreateDataLoader(opt):
         split = opt.train_split
         phase = 'train'
 
-    crop = opt.use_crop
-    resize = opt.use_resize
-    
+    #crop = opt.use_crop
+    #resize = opt.use_resize
+    #raise(RuntimeError(str(crop)))
+    crop = False
+    resize = True
     if opt.validate:
         # if crop, get imagesize and define padding for tests
         set_valloader = DatasetFromFolder(opt, opt.dataroot, phase='val', data_split=opt.val_split, data_augmentation=["F", "F", "F", "F", "F"], crop=False, resize=resize, data_transform=data_transform, imageSize=opt.imageSize,

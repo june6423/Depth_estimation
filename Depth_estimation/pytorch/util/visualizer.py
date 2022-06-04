@@ -56,6 +56,7 @@ class Visualizer():
         if self.display_id > 0:
             if table:
                 for i, (label, image_numpy) in enumerate(visuals.items()):
+                    #print("size of image" + str(image_numpy.shape))
                     if i == 0:
                         image_conc = self.tensor2im(image_numpy)
                         label_conc = label
