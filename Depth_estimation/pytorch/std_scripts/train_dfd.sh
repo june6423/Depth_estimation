@@ -6,14 +6,14 @@ port=8001
 display_id=100
 
 # Training
-NEPOCHS=100
+NEPOCHS=300
 
 weightDecay=1e-4
 
 # data augmentation: hflip vfkip scale color rotate 
 
 NAME="dfd_train" # Change the name when training a new project
-DATAROOT="../dfd_datasets/zed_dataset/"
+DATAROOT="../dfd_datasets/custom_dataset/"
 BATCHSIZE=4
 MTL_MODEL="eweights" # This project is adaptable for single and multitask objectives
 MODEL="monotask"
